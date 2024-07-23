@@ -1,0 +1,41 @@
+﻿
+
+pegauser@ie2283yr:\~praveen/shellscripting
+pegauser@ie2283yr:/opt/SP/app/praveen/shellscripting $ cat healthalert.sh
+#!/bin/bash
+##To Collect Report of The Server
+#Author: Praveen Kumar
+#rm /opt/SP/app/praveen/shellscripting/healthalert.log Alert=0
+rm /opt/SP/app/praveen/shellscripting/mail.txt
+touch /opt/SP/app/praveen/shellscripting/mail.txt
+HOSTNAME=$(hostname)
+CPUFREE=$(iostat | head -4 1 tall -1 I cut -f31 -d " ") MEMFREE=$(free -t | awk 'FNR 4 (print $3/$2*100)") MEMF-${MEMFREE.*}
+EN English (United States)
+[0-9]*')
+DISKAPP $ (df -P I column -t I grep "/opt/SP/app" | awk '{print $5) | grep -o DISKLOG=$ (df -P | column -t I grep "/opt/SP/logs" | awk '{print $5}'I grep -o '[0-9]*') IOSTAT=$ (uptime I cut -f15 -d
+if [ $DISKAPP -gt 90 ];
+then Alert=1
+echo -e "The Disk Utilization of /opt/SP/app On $HOSTNAME Is $DISKAPP ""\n" >> /opt/SP/app/praveen/shellscripting/mail.txt else
+echo "Disk App Of $HOSTNAME Is Good"
+fi
+if [ $DISKLOG -gt 80 ];
+then
+Alert=1
+echo -e "The Disk Utilization of /opt/SP/logs On $HOSTNAME IS $DISKLOG\n" >> /opt/SP/app/praveen/shellscripting/mail.txt else
+echo "Disk Log Of $HOSTNAME IS Good"
+fi
+if [ $MEMF -gt 80 ];
+then
+Alert-1
+echo -e "The Memory Free Left On Node $hostname Is $MEMF%\n" >> /opt/SP/app/praveen/shellscripting/mail.txt else
+echo "Memory of $HOSTNAME Is Normal"
+fi
+if [ $CPUFREE -1t 10.0 ];
+then
+Alert=1
+echo -e "The CPU Utilization Left On Node $hostname is $CPUFREE%\n" >> /opt/SP/app/praveen/shellscripting/mail.txt else
+echo "CPU Is Normal"
+fi
+if [ $IOSTAT -gt 20.0 ];
+85°F Sunny
+Search

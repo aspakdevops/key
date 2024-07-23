@@ -1,0 +1,46 @@
+﻿
+
+pegauser@ie2283yr:\~praveen/shellscripting
+echo "Disk App Of $RHOSTNAME Is Good"
+fi
+if [ $RDISKLOG -gt 80 ];
+then
+Alert-1
+EN English (United States)
+echo -e "The Disk Utilization of /opt/SP/logs On $RHOSTNAME IS $RDISKLOG%\n" >> /opt/SP/app/praveen/shellscripting/mail.txt else
+echo "Disk Log of $RHOSTNAME Is Good"
+fi
+if [ $RMEMF -gt 80 ];
+then
+Alert=1
+echo -e "The Memory Utilization On Node $RHOSTNAME IS $RMEMF ""\n" >> /opt/SP/app/praveen/shellscripting/mail.txt
+else
+echo "Memory of $RHOSTNAME Is Normal"
+fi
+if [ $RCPUFREE -1t 10.0 ];
+then
+Alert=1
+echo -e "The CPU Utilization Left On Node $hostname is $CPUFREE\\n" >> /opt/SP/app/praveen/shellscripting/mail.txt else
+echo "CPU Is Normal"
+fi
+if [ $RIOSTAT -gt 20.0 ];
+then
+Alert-1
+echo -e "The Load Average On Node $hostname is $IOSTAT\n" >> /opt/SP/app/praveen/shellscripting/mail.txt else
+echo "Load Average Is Normal"
+fi
+done
+if [ $Alert -eq 1 ];
+then
+echo -e "Instructions for SMC: \n
+1) If this alert comes in business hours, please raise P3 INC & assign it to Pega_L2 queue with all details & attach email of alert. \n
+2) If this alert comes in out of business hours continuously, please raise P3 INC & assign it to Pega L2 queue with all details & attach email of alert. Also contact OnCall of Pega L2 team. \n
+\n\n Thanks, \n Pega L2 Team" >> /opt/SP/app/praveen/shellscripting/mail.txt
+mail -s "Pega | Alert | Pega Weblogic Infra" dl-tssc-ao-aom-12@vodafone.com, DL-VISPL_SMC@vodafone.com < /opt/SP/app/praveen/shellscripting/mail.txt else echo "No Alert"
+fi
+pegauser@ie2283yr:/opt/SP/app/praveen/shellscripting $
+1 85°F
+Sunny
+Search
+1:27 PM 2/9/2024
+814

@@ -1,0 +1,49 @@
+﻿
+
+pegauser@ie2283yr:\~praveen/shellscripting
+echo "CPU Is Normal"
+fi
+if [ $IOSTAT -gt 20.0 ];
+then
+Alert-1
+EN English (United States)
+echo -e "The Load Average On Node $hostname is $IOSTAT\n" >> /opt/SP/app/praveen/shellscripting/mail.txt else
+echo "Load Average Is Normal"
+fi
+for i in cat /opt/SP/app/praveen/shellscripting/hostfile.txt':
+do
+RHOSTNAME=$(ssh $i hostname)
+column -t grep "/opt/SP/app" | awk '{print $5)
+I grep -o '[0-9]*')
+RDISKAPP=$(ssh $i df -P
+RDISKLOG=$(ssh $i df -P
+column -t | grep "/opt/SP/logs" | awk '{print $5) | grep -o [0-9]**) 4 (print $3/$2*100}")
+RMEMFREE-$ (ssh $i free -t | awk 'FNR
+RMEMF-${RMEMFREE*.*}
+RCPUFREE=$(ssh $i iostat | head -4 tail -1 | cut -£31 -d " ")
+RIOSTAT=$(ssh $i uptime I cut -f15 -d " ")
+if [ $RDISKAPP -gt 90 ];
+then
+Alert-1
+echo -e "The Disk Utilization of /opt/SP/app On $RHOSTNAME IS $RDISKAPPS\n" >> /opt/SP/app/praveen/shellscripting/mail.txt else
+echo "Disk App of $RHOSTNAME Is Good"
+fi
+if [ $RDISKLOG -gt 80 ];
+then
+Alert=1
+echo -e "The Disk Utilization of /opt/SP/logs On $RHOSTNAME IS $RDISKLOG\n" >> /opt/SP/app/praveen/shellscripting/mail.txt else
+echo "Disk Log of $RHOSTNAME IS Good"
+fi
+if [ $RMEMF-gt 80 ];
+then
+Alert-1
+echo -e "The Memory Utilization On Node $RHOSTNAME IS SRMEMF""\n" >> /opt/SP/app/praveen/shellscripting/mail.txt
+else
+echo "Memory of $RHOSTNAME Is Normal"
+fi
+if [ $RCPUFREE -1t 10.0 1;
+then
+Alert=1
+echo -e "The CPU Utilization Left On Node $hostname is $CPUFREE\n" >> /opt/SP/app/praveen/shellscripting/mail.txt else
+85°F Sunny
+Search
